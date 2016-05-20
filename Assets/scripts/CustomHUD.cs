@@ -34,6 +34,10 @@ public class CustomHUD : MonoBehaviour {
 	}
 
 	public void StartClient(){
+
+		if (input_field.text == null)
+			return;
+
 		if (!NetworkClient.active && !NetworkServer.active && manager.matchMaker == null)
 		{
 			manager.networkAddress = input_field.text;
