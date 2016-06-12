@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{4292C74E-7696-FC80-9587-5C069E9F370A}") = "BrokenTank", "Assembly-CSharp.csproj", "{70A84880-8A95-9FE3-D2EC-6915BE01C032}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70A84880-8A95-9FE3-D2EC-6915BE01C032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A84880-8A95-9FE3-D2EC-6915BE01C032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A84880-8A95-9FE3-D2EC-6915BE01C032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A84880-8A95-9FE3-D2EC-6915BE01C032}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

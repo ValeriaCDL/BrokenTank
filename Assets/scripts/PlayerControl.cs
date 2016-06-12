@@ -3,6 +3,7 @@ using System.Collections;
 using SimpleJSON;
 using UnityEngine.Networking;
 
+[RequireComponent(typeof(AudioSource))]
 public class PlayerControl : NetworkBehaviour {
 
 
@@ -35,6 +36,19 @@ public class PlayerControl : NetworkBehaviour {
 
 	}
 
+    [Command]
+    void CmdSendAudio()
+    {
+        RpcSendAudioToClients();
+    }
+
+    [ClientRpc]
+    void RpcSendAudioToClients()
+    {
+        float vol = Random.Range(volBajo, volAlto);
+        fuenteSonido.PlayOneShot(fuenteSonido.clip, vol);
+    }
+
 	void Update(){
 
 		if (!isLocalPlayer) {return;}
@@ -56,8 +70,9 @@ public class PlayerControl : NetworkBehaviour {
 	[Command]
 	void CmdFire(){
 
-		float vol = Random.Range (volBajo, volAlto);
-		fuenteSonido.PlayOneShot (fuenteSonido.clip,vol);
+        //float vol = Random.Range (volBajo, volAlto);
+        //fuenteSonido.PlayOneShot (fuenteSonido.clip,vol);
+        CmdSendAudio();
 		GameObject bullet = Instantiate (bala, barril.position, barril.rotation) as GameObject;
 
 		//Le dice al servidor q lo instance en los clientes
