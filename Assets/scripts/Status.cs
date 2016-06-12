@@ -20,6 +20,7 @@ public class Status : MonoBehaviour {
 				cam.transform.parent=null;
 
 			Destroy (gameObject);
+
 		}
 	}
 }
